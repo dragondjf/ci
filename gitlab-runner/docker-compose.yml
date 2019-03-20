@@ -1,0 +1,10 @@
+web:
+  image: gitlab/gitlab-runner:latest
+  container_name: gitlab-runner
+  hostname: gitlab-runner
+  restart: always
+  links:
+    - gitlab:gitlab.yfjz.com
+  volumes:
+    - /mnt/work/gitlab-runner/config:/etc/gitlab-runner
+    - /var/run/docker.sock:/var/run/docker.sock

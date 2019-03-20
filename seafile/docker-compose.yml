@@ -1,0 +1,11 @@
+version: "3.6"
+services:
+  gitlab:
+    image: seafileltd/seafile:latest
+    container_name: seafile
+    restart: always
+    hostname: seafile
+    ports:
+      - 9876:80
+    volumes:
+      - /mnt/work/seafile:/shared

@@ -1,0 +1,27 @@
+version: "3.6"
+services:
+  ipfs1:
+    image: dragondjf/ipfs:latest
+    container_name: go-ipfs
+    restart: always
+    hostname: go-ipfs
+    ports:
+      - 4001:4001
+      - 5010:5010
+      - 8080:8080
+    volumes:
+      - /mnt/work/go-ipfs/export:/export
+      - /mnt/work/go-ipfs/ipfs:/data/ipfs
+
+  ipfs2:
+    image: dragondjf/ipfs:latest
+    container_name: go-ipfs2
+    restart: always
+    hostname: go-ipfs2
+    ports:
+      - 4002:4001
+      - 5020:5020
+      - 8082:8080
+    volumes:
+      - /mnt/work/go-ipfs2/export:/export
+      - /mnt/work/go-ipfs2/ipfs:/data/ipfs
