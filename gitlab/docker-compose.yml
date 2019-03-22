@@ -7,7 +7,7 @@ services:
     hostname: 'gitlab.yfjz.com'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://gitlab.yfjz.com'
+        external_url 'http://192.168.3.182'
         gitlab_rails['gitlab_shell_ssh_port'] = 2224
     ports:
       - '80:80'
